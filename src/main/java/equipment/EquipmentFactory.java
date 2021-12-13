@@ -24,7 +24,7 @@ public class EquipmentFactory {
 
     public static EquipmentInterface getCommonFog() {
         CommonFog fog = new CommonFog(
-                MemoryFactory.hdd500(),
+                MemoryFactory.hdd500ForFogNog(),
                 0.7,
                 ProcessorFactory.getPM128(),
                 0.7,
@@ -48,7 +48,7 @@ public class EquipmentFactory {
     }
 
     public static EquipmentInterface getCommonDevice() {
-            return new CommonDevice(new CommonDataGenerator(), new CommonEquipmentListener());
+        return new CommonDevice(new CommonDataGenerator(), new CommonEquipmentListener());
     }
 
     public static EquipmentInterface getTestDevice() {

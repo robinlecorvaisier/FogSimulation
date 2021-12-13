@@ -1,6 +1,6 @@
 package data;
 
-public interface DataInterface {
+public interface DataInterface extends Comparable<DataInterface> {
 
     double getSize();
 

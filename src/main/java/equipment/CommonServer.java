@@ -25,23 +25,30 @@ public class CommonServer extends EquipmentCommon {
 
     @Override
     public void action(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
+        putInCPUCache();
+        processCPU(equipmentGraph);
+    }
 
+    protected void putInCPUCache() {
         while (this.hasData() && processor.getPercentageStorage() < percentageProcessorThreshold) {
             DataInterface dataRead = storage.read();
-
-            if (isExpiredData(dataRead)) {
-                continue;
-            }
-
             if (!processor.charge(dataRead)) {
                 storage.write(dataRead);
                 return;
             }
-
         }
+    }
+
+    protected void processCPU(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
         EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph);
+
         while (processor.hasData()) {
-            this.transmitData(nextEquipment, processor.transmit());
+            DataInterface dataReadFromCPU = processor.transmit();
+
+            if (isExpiredData(dataReadFromCPU)) {
+                continue;
+            }
+            this.transmitData(nextEquipment, dataReadFromCPU);
         }
     }
 

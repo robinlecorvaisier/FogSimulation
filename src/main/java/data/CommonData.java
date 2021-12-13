@@ -2,7 +2,7 @@ package data;
 
 import listener.data.DataListenerInterface;
 
-public class CommonData implements DataInterface {
+public class CommonData implements DataInterface, Comparable<DataInterface> {
 
     private final double size;
     private DataListenerInterface dataListener;
@@ -42,5 +42,10 @@ public class CommonData implements DataInterface {
     @Override
     public void lost() {
         dataListener.onDataLost(this);
+    }
+
+    @Override
+    public int compareTo(DataInterface data) {
+        return Integer.compare(this.getPriority(), data.getPriority());
     }
 }

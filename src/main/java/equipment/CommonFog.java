@@ -20,40 +20,35 @@ public class CommonFog extends CommonServer {
     }
 
     @Override
-    public void action(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
-        while (this.hasData() && processor.getPercentageStorage() < percentageProcessorThreshold) {
-            DataInterface dataRead = storage.read();
+    protected void putInCPUCache() {
+        super.putInCPUCache();
+    }
 
-            if (super.isExpiredData(dataRead)) {
-                continue;
-            } else if(hasToProcess(dataRead)){
-                dataRead.process();
-                equipmentListener.onDataProcessed(dataRead);
-            } else {
-                EquipmentInterface nearestFog = findTheNearestFog(equipmentGraph);
-                this.transmitData(nearestFog, processor.transmit());
-            }
-
-            if (!processor.charge(dataRead)) {
-                storage.write(dataRead);
-                return;
-            }
-
-        }
-
-
+    @Override
+    protected void processCPU(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
         EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph);
+
         while (processor.hasData()) {
-            this.transmitData(nextEquipment, processor.transmit());
+            DataInterface dataReadFromCPU = processor.transmit();
+
+            if (isExpiredData(dataReadFromCPU)) {
+                continue;
+            }
+
+            if (hasToProcess(dataReadFromCPU)) {
+                processData(dataReadFromCPU);
+            }
+
+            this.transmitData(nextEquipment, dataReadFromCPU);
         }
     }
 
-    public boolean hasToProcess(DataInterface data){
+    public boolean hasToProcess(DataInterface data) {
         return data.getPriority() <= 3;
     }
 
-    public EquipmentInterface findTheNearestFog(Graph<EquipmentInterface, DefaultEdge> equipementGraph){
-        DijkstraManyToManyShortestPaths<EquipmentInterface,DefaultEdge> dijkstra =
+    public EquipmentInterface findTheNearestFog(Graph<EquipmentInterface, DefaultEdge> equipementGraph) {
+        DijkstraManyToManyShortestPaths<EquipmentInterface, DefaultEdge> dijkstra =
                 new DijkstraManyToManyShortestPaths<>(equipementGraph);
         Set<EquipmentInterface> source = new HashSet<>();
         source.add(this);
@@ -63,7 +58,7 @@ public class CommonFog extends CommonServer {
 
         EquipmentInterface nextFog = shortestPaths.getTargets().iterator().next();
 
-        if(nextFog.equals(this) && shortestPaths.getTargets().iterator().hasNext()){
+        if (nextFog.equals(this) && shortestPaths.getTargets().iterator().hasNext()) {
             nextFog = shortestPaths.getTargets().iterator().next();
         }
 

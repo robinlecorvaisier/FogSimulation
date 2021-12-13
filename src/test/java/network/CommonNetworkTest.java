@@ -29,10 +29,7 @@ class CommonNetworkTest {
     @Test
     void testHugeNetwork() throws IOException {
 
-        NetworkInterface network = NetworkFactory.hugeTestNetwork();
-        network.setNetworkName("test huge network");
-        System.out.println(network);
-        System.out.println(network.getDot());
+        NetworkInterface network = NetworkFactory.hugeTestWithFogNetwork();
 
         for (int i = 0; i < 30; i++) {
             network.iterate();

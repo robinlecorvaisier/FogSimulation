@@ -40,6 +40,11 @@ public abstract class EquipmentCommon implements EquipmentInterface {
         return true;
     }
 
+    protected void processData(DataInterface data) {
+        equipmentListener.onDataProcessed(data);
+        data.process();
+    }
+
     @Override
     public void setName(String equipmentName) {
         this.equipmentName = equipmentName;

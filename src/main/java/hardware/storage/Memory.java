@@ -2,22 +2,26 @@ package hardware.storage;
 
 import data.DataInterface;
 
-import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Memory implements StorageInterface {
 
-    private final ArrayList<DataInterface> dataInterfaces;
+    private final Set<DataInterface> dataInterfaces;
     private final float maxStorage;
     private double currentStorage;
 
-    public Memory(float maxStorage) {
-        dataInterfaces = new ArrayList<>();
+    public Memory(float maxStorage, Set<DataInterface> dataSet) {
+        dataInterfaces = dataSet;
         this.maxStorage = maxStorage;
     }
 
     @Override
     public DataInterface read() {
-        DataInterface dataRead = dataInterfaces.remove(0);
+        Iterator<DataInterface> it = dataInterfaces.iterator();
+        DataInterface dataRead = it.next();
+        dataInterfaces.remove(dataRead);
         currentStorage -= dataRead.getSize();
         return dataRead;
     }
@@ -61,7 +65,7 @@ public class Memory implements StorageInterface {
         return this.getClass().getSimpleName() + maxStorage;
     }
 
-    public ArrayList<DataInterface> getDataInterfaces() {
+    public Set<DataInterface> getDataInterfaces() {
         return dataInterfaces;
     }
 

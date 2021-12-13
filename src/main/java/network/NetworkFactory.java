@@ -147,7 +147,10 @@ public class NetworkFactory {
         graph.addEdge(device9, server1);
         graph.addEdge(device10, server4);
 
-        return new CommonNetwork(graph);
+
+        NetworkInterface network = new CommonNetwork(graph);
+        network.setNetworkName("huge test network");
+        return network;
     }
 
     public static NetworkInterface hugeTestWithFogNetwork() {
@@ -156,11 +159,18 @@ public class NetworkFactory {
 
         Map<String, EquipmentInterface> vertex = new HashMap<>();
 
-        EquipmentInterface server1 = EquipmentFactory.getCommonServer();
+        EquipmentInterface server1 = EquipmentFactory.getCommonFog();
         EquipmentInterface server2 = EquipmentFactory.getCommonServer();
         EquipmentInterface server3 = EquipmentFactory.getCommonServer();
         EquipmentInterface server4 = EquipmentFactory.getCommonServer();
         EquipmentInterface server5 = EquipmentFactory.getCommonServer();
+
+        server1.setName("server Fog 1");
+        server2.setName("server2");
+        server3.setName("server3");
+        server4.setName("server4");
+        server5.setName("server5");
+
 
         EquipmentInterface cluster = EquipmentFactory.getCluster();
 
@@ -212,7 +222,9 @@ public class NetworkFactory {
         graph.addEdge(device9, server1);
         graph.addEdge(device10, server4);
 
-        return new CommonNetwork(graph);
+        NetworkInterface network = new CommonNetwork(graph);
+        network.setNetworkName("huge test network with fog");
+        return network;
     }
 
     private Graph<EquipmentInterface, DefaultEdge> AddVertex(

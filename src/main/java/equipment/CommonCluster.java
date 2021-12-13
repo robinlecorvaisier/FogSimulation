@@ -19,8 +19,7 @@ public class CommonCluster extends EquipmentCommon implements EquipmentInterface
     @Override
     public boolean receiptData(DataInterface data) {
         super.receiptData(data);
-        equipmentListener.onDataProcessed(data);
-        data.process();
+        processData(data);
         return true;
     }
 
