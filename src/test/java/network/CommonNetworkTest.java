@@ -27,6 +27,21 @@ class CommonNetworkTest {
     }
 
     @Test
+    void testHugeNetwork() throws IOException {
+
+        NetworkInterface network = NetworkFactory.hugeTestNetwork();
+        network.setNetworkName("test huge network");
+        System.out.println(network);
+        System.out.println(network.getDot());
+
+        for (int i = 0; i < 30; i++) {
+            network.iterate();
+        }
+
+        GraphVizFactory.generateSvg(network);
+    }
+
+    @Test
     void simpleIteration() throws IOException {
         NetworkInterface network = NetworkFactory.simpleTestNetwork();
         for (int i = 0; i < 3; i++) {
@@ -34,9 +49,9 @@ class CommonNetworkTest {
         }
 
         double[][] expectedValues = new double[][]{
-                new double[]{0, 0, 3, 300, 0, 0},
-                new double[]{3, 300, 3, 300, 0, 0},
-                new double[]{3, 300, 0, 0, 0, 0},
+                new double[]{0, 0, 3, 300, 0, 0, 0},
+                new double[]{3, 300, 3, 300, 0, 0, 0},
+                new double[]{3, 300, 0, 0, 0, 0, 0},
         };
 
         GraphVizFactory.generateSvg(network);
@@ -67,6 +82,7 @@ class CommonNetworkTest {
                 equipmentListener.getDataTransmitSize(),
                 equipmentListener.getDataProcessedCount(),
                 equipmentListener.getDataProcessedSize(),
+                equipmentListener.getDataExpiredCount(),
         };
 
         Assertions.assertArrayEquals(expectedValues, actualValues);

@@ -15,9 +15,13 @@ public interface EquipmentListenerInterface {
 
     double getDataProcessedSize();
 
+    int getDataExpiredCount();
+
     void onDataReceipt(DataInterface data);
 
     void onDataTransmit(DataInterface data);
+
+    void onDataExpired(DataInterface data);
 
     void onDataProcessed(DataInterface data);
 }

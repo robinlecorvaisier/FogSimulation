@@ -14,7 +14,7 @@ public abstract class EquipmentCommon implements EquipmentInterface {
     protected EquipmentListenerInterface equipmentListener;
 
     public EquipmentCommon(EquipmentListenerInterface equipmentListener) {
-        this.equipmentName = this.getClass().getSimpleName();
+        this.equipmentName = super.toString();
         this.equipmentListener = equipmentListener;
     }
 

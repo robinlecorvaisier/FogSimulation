@@ -45,9 +45,10 @@ public class CommonServer extends EquipmentCommon {
         }
     }
 
-    private boolean isExpiredData(DataInterface data) {
+    protected boolean isExpiredData(DataInterface data) {
         if (data.isExpired()) {
             data.expire();
+            equipmentListener.onDataExpired(data);
             return true;
         }
         return false;
