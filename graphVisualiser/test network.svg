@@ -1,0 +1,110 @@
+<svg width="773pt" height="496pt"
+ viewBox="0.00 0.00 773.08 496.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 492)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-492 769.0758,-492 769.0758,4 -4,4"/>
+<text text-anchor="middle" x="382.5379" y="-58.6" font-family="Times,serif" font-size="14.00" fill="#000000">test network</text>
+<text text-anchor="middle" x="382.5379" y="-41.8" font-family="Times,serif" font-size="14.00" fill="#000000">Data lost : 0(0.0)</text>
+<text text-anchor="middle" x="382.5379" y="-25" font-family="Times,serif" font-size="14.00" fill="#000000">Data Expired : 4(167.03471654565325)</text>
+<text text-anchor="middle" x="382.5379" y="-8.2" font-family="Times,serif" font-size="14.00" fill="#000000">Data Processed :0(0.0)</text>
+<!-- Device_1 -->
+<g id="node1" class="node">
+<title>Device_1</title>
+<polygon fill="none" stroke="#000000" points="0,-412.3 0,-487.5 243.0758,-487.5 243.0758,-412.3 0,-412.3"/>
+<text text-anchor="middle" x="121.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Device 1</text>
+<text text-anchor="middle" x="121.5379" y="-454.1" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="121.5379" y="-437.3" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(912.0457018187108)</text>
+<text text-anchor="middle" x="121.5379" y="-420.5" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- S2 -->
+<g id="node4" class="node">
+<title>S2</title>
+<polygon fill="none" stroke="#000000" points="261,-300.1 261,-375.3 504.0758,-375.3 504.0758,-300.1 261,-300.1"/>
+<text text-anchor="middle" x="382.5379" y="-358.7" font-family="Times,serif" font-size="14.00" fill="#000000">S2</text>
+<text text-anchor="middle" x="382.5379" y="-341.9" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 60(1877.851244491313)</text>
+<text text-anchor="middle" x="382.5379" y="-325.1" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 60(1877.851244491313)</text>
+<text text-anchor="middle" x="382.5379" y="-308.3" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- Device_1&#45;&gt;S2 -->
+<g id="edge4" class="edge">
+<title>Device_1&#45;&gt;S2</title>
+<path fill="none" stroke="#000000" d="M209.1732,-412.2269C233.598,-401.727 260.2764,-390.2584 285.2221,-379.5346"/>
+<polygon fill="#000000" stroke="#000000" points="286.8849,-382.6296 294.6896,-375.4647 284.1202,-376.1986 286.8849,-382.6296"/>
+</g>
+<!-- Device_2 -->
+<g id="node2" class="node">
+<title>Device_2</title>
+<polygon fill="none" stroke="#000000" points="261,-412.3 261,-487.5 504.0758,-487.5 504.0758,-412.3 261,-412.3"/>
+<text text-anchor="middle" x="382.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Device 2</text>
+<text text-anchor="middle" x="382.5379" y="-454.1" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="382.5379" y="-437.3" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(965.8055426726015)</text>
+<text text-anchor="middle" x="382.5379" y="-420.5" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- Device_2&#45;&gt;S2 -->
+<g id="edge5" class="edge">
+<title>Device_2&#45;&gt;S2</title>
+<path fill="none" stroke="#000000" d="M382.5379,-412.2269C382.5379,-403.716 382.5379,-394.5686 382.5379,-385.6973"/>
+<polygon fill="#000000" stroke="#000000" points="386.038,-385.4646 382.5379,-375.4647 379.038,-385.4647 386.038,-385.4646"/>
+</g>
+<!-- Device_3 -->
+<g id="node3" class="node">
+<title>Device_3</title>
+<polygon fill="none" stroke="#000000" points="522,-412.3 522,-487.5 765.0758,-487.5 765.0758,-412.3 522,-412.3"/>
+<text text-anchor="middle" x="643.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Device 3</text>
+<text text-anchor="middle" x="643.5379" y="-454.1" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="643.5379" y="-437.3" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(897.2081447424116)</text>
+<text text-anchor="middle" x="643.5379" y="-420.5" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- S3 -->
+<g id="node5" class="node">
+<title>S3</title>
+<polygon fill="none" stroke="#000000" points="522,-300.1 522,-375.3 765.0758,-375.3 765.0758,-300.1 522,-300.1"/>
+<text text-anchor="middle" x="643.5379" y="-358.7" font-family="Times,serif" font-size="14.00" fill="#000000">S3</text>
+<text text-anchor="middle" x="643.5379" y="-341.9" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 30(897.2081447424116)</text>
+<text text-anchor="middle" x="643.5379" y="-325.1" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(897.2081447424116)</text>
+<text text-anchor="middle" x="643.5379" y="-308.3" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- Device_3&#45;&gt;S3 -->
+<g id="edge6" class="edge">
+<title>Device_3&#45;&gt;S3</title>
+<path fill="none" stroke="#000000" d="M643.5379,-412.2269C643.5379,-403.716 643.5379,-394.5686 643.5379,-385.6973"/>
+<polygon fill="#000000" stroke="#000000" points="647.038,-385.4646 643.5379,-375.4647 640.038,-385.4647 647.038,-385.4646"/>
+</g>
+<!-- S1 -->
+<g id="node6" class="node">
+<title>S1</title>
+<polygon fill="none" stroke="#000000" points="391,-187.9 391,-263.1 634.0758,-263.1 634.0758,-187.9 391,-187.9"/>
+<text text-anchor="middle" x="512.5379" y="-246.5" font-family="Times,serif" font-size="14.00" fill="#000000">S1</text>
+<text text-anchor="middle" x="512.5379" y="-229.7" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 90(2775.059389233724)</text>
+<text text-anchor="middle" x="512.5379" y="-212.9" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 86(2608.024672688071)</text>
+<text text-anchor="middle" x="512.5379" y="-196.1" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- S2&#45;&gt;S1 -->
+<g id="edge2" class="edge">
+<title>S2&#45;&gt;S1</title>
+<path fill="none" stroke="#000000" d="M426.1877,-300.0269C437.335,-290.4059 449.4248,-279.9714 460.9295,-270.042"/>
+<polygon fill="#000000" stroke="#000000" points="463.4985,-272.4481 468.7821,-263.2647 458.9249,-267.1488 463.4985,-272.4481"/>
+</g>
+<!-- S3&#45;&gt;S1 -->
+<g id="edge3" class="edge">
+<title>S3&#45;&gt;S1</title>
+<path fill="none" stroke="#000000" d="M599.5524,-300.0269C588.3193,-290.4059 576.1365,-279.9714 564.5433,-270.042"/>
+<polygon fill="#000000" stroke="#000000" points="566.5021,-267.1115 556.6303,-263.2647 561.9486,-272.428 566.5021,-267.1115"/>
+</g>
+<!-- Cluster_1 -->
+<g id="node7" class="node">
+<title>Cluster_1</title>
+<polygon fill="none" stroke="#000000" points="394.8913,-75.7 394.8913,-150.9 630.1845,-150.9 630.1845,-75.7 394.8913,-75.7"/>
+<text text-anchor="middle" x="512.5379" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">Cluster 1</text>
+<text text-anchor="middle" x="512.5379" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 86(2608.024672688071)</text>
+<text text-anchor="middle" x="512.5379" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 0(0.0)</text>
+<text text-anchor="middle" x="512.5379" y="-83.9" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- S1&#45;&gt;Cluster_1 -->
+<g id="edge1" class="edge">
+<title>S1&#45;&gt;Cluster_1</title>
+<path fill="none" stroke="#000000" d="M512.5379,-187.8269C512.5379,-179.316 512.5379,-170.1686 512.5379,-161.2973"/>
+<polygon fill="#000000" stroke="#000000" points="516.038,-161.0646 512.5379,-151.0647 509.038,-161.0647 516.038,-161.0646"/>
+</g>
+</g>
+</svg>

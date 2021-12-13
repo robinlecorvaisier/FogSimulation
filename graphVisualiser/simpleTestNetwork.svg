@@ -1,0 +1,46 @@
+<svg width="160pt" height="309pt"
+ viewBox="0.00 0.00 160.08 308.60" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 304.6)">
+<title>G</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-304.6 156.0758,-304.6 156.0758,4 -4,4"/>
+<!-- device -->
+<g id="node1" class="node">
+<title>device</title>
+<polygon fill="none" stroke="#000000" points="0,-224.9 0,-300.1 152.0758,-300.1 152.0758,-224.9 0,-224.9"/>
+<text text-anchor="middle" x="76.0379" y="-283.5" font-family="Times,serif" font-size="14.00" fill="#000000">device</text>
+<text text-anchor="middle" x="76.0379" y="-266.7" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="76.0379" y="-249.9" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 3(300.0)</text>
+<text text-anchor="middle" x="76.0379" y="-233.1" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- server -->
+<g id="node2" class="node">
+<title>server</title>
+<polygon fill="none" stroke="#000000" points="0,-112.7 0,-187.9 152.0758,-187.9 152.0758,-112.7 0,-112.7"/>
+<text text-anchor="middle" x="76.0379" y="-171.3" font-family="Times,serif" font-size="14.00" fill="#000000">server</text>
+<text text-anchor="middle" x="76.0379" y="-154.5" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 3(300.0)</text>
+<text text-anchor="middle" x="76.0379" y="-137.7" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 3(300.0)</text>
+<text text-anchor="middle" x="76.0379" y="-120.9" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- device&#45;&gt;server -->
+<g id="edge1" class="edge">
+<title>device&#45;&gt;server</title>
+<path fill="none" stroke="#000000" d="M76.0379,-224.8269C76.0379,-216.316 76.0379,-207.1686 76.0379,-198.2973"/>
+<polygon fill="#000000" stroke="#000000" points="79.538,-198.0646 76.0379,-188.0647 72.538,-198.0647 79.538,-198.0646"/>
+</g>
+<!-- cluster -->
+<g id="node3" class="node">
+<title>cluster</title>
+<polygon fill="none" stroke="#000000" points="3.8913,-.5 3.8913,-75.7 148.1845,-75.7 148.1845,-.5 3.8913,-.5"/>
+<text text-anchor="middle" x="76.0379" y="-59.1" font-family="Times,serif" font-size="14.00" fill="#000000">cluster</text>
+<text text-anchor="middle" x="76.0379" y="-42.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 3(300.0)</text>
+<text text-anchor="middle" x="76.0379" y="-25.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 0(0.0)</text>
+<text text-anchor="middle" x="76.0379" y="-8.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+</g>
+<!-- server&#45;&gt;cluster -->
+<g id="edge2" class="edge">
+<title>server&#45;&gt;cluster</title>
+<path fill="none" stroke="#000000" d="M76.0379,-112.6269C76.0379,-104.116 76.0379,-94.9686 76.0379,-86.0973"/>
+<polygon fill="#000000" stroke="#000000" points="79.538,-85.8646 76.0379,-75.8647 72.538,-85.8647 79.538,-85.8646"/>
+</g>
+</g>
+</svg>
