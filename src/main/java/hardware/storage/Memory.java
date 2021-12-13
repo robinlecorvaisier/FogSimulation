@@ -43,7 +43,7 @@ public class Memory implements StorageInterface {
 
     @Override
     public double getNewPercentageStorage(DataInterface data) {
-        return 0;
+        return (currentStorage + data.getSize()) / maxStorage;
     }
 
     @Override

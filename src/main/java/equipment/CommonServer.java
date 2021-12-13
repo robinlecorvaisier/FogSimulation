@@ -56,10 +56,12 @@ public class CommonServer extends EquipmentCommon {
 
     @Override
     public boolean receiptData(DataInterface data) {
-        super.receiptData(data);
         if (!willExceedThresholdStorage(data)) {
+            super.receiptData(data);
             return storage.write(data);
         }
+        equipmentListener.onDataLost(data);
+        data.lost();
         return false;
     }
 

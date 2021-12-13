@@ -19,19 +19,13 @@ public class CommonCluster extends EquipmentCommon implements EquipmentInterface
     @Override
     public boolean receiptData(DataInterface data) {
         super.receiptData(data);
-        for (EquipmentInterface equipment : equipments) {
-            if (equipment.receiptData(data)) {
-                return true;
-            }
-        }
-        return false;
+        equipmentListener.onDataProcessed(data);
+        data.process();
+        return true;
     }
 
     @Override
     public void action(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
-//        for (EquipmentInterface equipment : this.equipments) {
-//            equipment.action(equipmentGraph);
-//        }
     }
 
     @Override

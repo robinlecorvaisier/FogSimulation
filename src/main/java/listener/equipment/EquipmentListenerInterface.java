@@ -17,6 +17,10 @@ public interface EquipmentListenerInterface {
 
     int getDataExpiredCount();
 
+    int getDataLostCount();
+
+    double getDataLostSize();
+
     void onDataReceipt(DataInterface data);
 
     void onDataTransmit(DataInterface data);
@@ -24,4 +28,6 @@ public interface EquipmentListenerInterface {
     void onDataExpired(DataInterface data);
 
     void onDataProcessed(DataInterface data);
+
+    void onDataLost(DataInterface data);
 }

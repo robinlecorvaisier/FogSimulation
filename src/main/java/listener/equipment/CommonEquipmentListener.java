@@ -13,6 +13,9 @@ public class CommonEquipmentListener implements EquipmentListenerInterface {
     private int dataProcessedCount;
     private double dataProcessedSize;
 
+    private int dataLostCount;
+    private double dataLostSize;
+
     private int expiredDataCount;
 
     @Override
@@ -46,7 +49,9 @@ public class CommonEquipmentListener implements EquipmentListenerInterface {
     }
 
     @Override
-    public int getDataExpiredCount() { return expiredDataCount; }
+    public int getDataExpiredCount() {
+        return expiredDataCount;
+    }
 
     @Override
     public void onDataReceipt(DataInterface data) {
@@ -66,6 +71,22 @@ public class CommonEquipmentListener implements EquipmentListenerInterface {
     }
 
     @Override
+    public int getDataLostCount() {
+        return dataLostCount;
+    }
+
+    @Override
+    public double getDataLostSize() {
+        return dataLostSize;
+    }
+
+    @Override
+    public void onDataLost(DataInterface data) {
+        dataLostCount++;
+        dataLostSize += data.getSize();
+    }
+
+    @Override
     public void onDataProcessed(DataInterface data) {
         dataProcessedCount++;
         dataProcessedSize += data.getSize();
@@ -76,6 +97,7 @@ public class CommonEquipmentListener implements EquipmentListenerInterface {
         return "\\nReceipt data : " + dataReceiptCount + "(" + dataReceiptSize + ")" +
                 "\\nTransmit data : " + dataTransmitCount + "(" + dataTransmitSize + ")" +
                 "\\nProcessed data :" + dataProcessedCount + "(" + dataProcessedSize + ")" +
+                "\\nLost data :" + dataLostCount + "(" + dataLostSize + ")" +
                 "\\nExpired data :" + expiredDataCount;
     }
 }
