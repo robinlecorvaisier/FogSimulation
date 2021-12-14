@@ -40,6 +40,20 @@ public class EquipmentFactory {
         return fog;
     }
 
+    public static EquipmentInterface getRandomFog() {
+        RandomFog fog = new RandomFog(
+                MemoryFactory.hdd500ForFogNog(),
+                0.7,
+                ProcessorFactory.getPM128(),
+                0.7,
+                new FogListener(),
+                DotStyliseFactory.getFogDotNode()
+        );
+
+        fogNods.add(fog);
+        return fog;
+    }
+
     public static Set<EquipmentInterface> getFogNods() {
         return fogNods;
     }

@@ -51,6 +51,18 @@ class CommonNetworkTest {
     }
 
     @Test
+    void testDemoRandom() throws IOException {
+
+        NetworkInterface network = NetworkFactory.demoWithRandomNetwork();
+
+        for (int i = 0; i < 100; i++) {
+            network.iterate();
+        }
+
+        GraphVizFactory.generateSvg(network);
+    }
+
+    @Test
     void testDemoWithoutFogNetwork() throws IOException {
 
         NetworkInterface network = NetworkFactory.demoNoFogsNetwork();
