@@ -19,4 +19,6 @@ public interface DataInterface extends Comparable<DataInterface> {
     EquipmentInterface getDestination();
 
     void setDestination(EquipmentInterface destination);
+
+    double getIterationHasBeenProcess();
 }

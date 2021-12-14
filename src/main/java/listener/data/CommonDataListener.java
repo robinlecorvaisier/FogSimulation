@@ -15,6 +15,8 @@ public class CommonDataListener implements DataListenerInterface {
     private int dataExpiredCount;
     private double dataExpiredSize;
 
+    private int iterationHasBeenProcess;
+
     @Override
     public void onIterationChange() {
         iteration++;
@@ -29,6 +31,7 @@ public class CommonDataListener implements DataListenerInterface {
     public void onDataProcessed(DataInterface data) {
         dataProcessedCount++;
         dataProcessedSize += data.getSize();
+        iterationHasBeenProcess += data.getIterationHasBeenProcess();
     }
 
     @Override
@@ -82,6 +85,7 @@ public class CommonDataListener implements DataListenerInterface {
     public String toString() {
         return "\\nData lost : " + dataLostCount + "(" + dataLostSize + ")" +
                 "\\nData Expired : " + dataExpiredCount + "(" + dataExpiredSize + ")" +
-                "\\nData Processed :" + dataProcessedCount + "(" + dataProcessedSize + ")";
+                "\\nData Processed :" + dataProcessedCount + "(" + dataProcessedSize + ")" +
+                "\\nAverage iteration to process : " + (iterationHasBeenProcess/(double)dataProcessedCount);
     }
 }

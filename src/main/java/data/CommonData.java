@@ -7,14 +7,18 @@ public class CommonData implements DataInterface, Comparable<DataInterface> {
 
     private final double size;
     private DataListenerInterface dataListener;
+    private int expiration;
     private int expirationDate;
     private EquipmentInterface destination;
+    private int creationDate;
 
     public CommonData(double size, int expirationDate, DataListenerInterface dataListener, EquipmentInterface destination) {
         this.dataListener = dataListener;
         this.size = size;
+        this.expiration = expirationDate;
         this.expirationDate = expirationDate + dataListener.getIteration();
         this.destination = destination;
+        this.creationDate = dataListener.getIteration();
     }
 
     @Override
@@ -60,5 +64,10 @@ public class CommonData implements DataInterface, Comparable<DataInterface> {
     @Override
     public void setDestination(EquipmentInterface destination) {
         this.destination = destination;
+    }
+
+    @Override
+    public double getIterationHasBeenProcess() {
+        return (this.dataListener.getIteration() + 2)  - (this.creationDate + 1);
     }
 }
