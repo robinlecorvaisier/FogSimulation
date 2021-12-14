@@ -59,7 +59,6 @@ public class CommonFog extends CommonServer {
 
         while (processor.hasData()) {
             DataInterface dataReadFromCPU = processor.transmit();
-            EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph, dataReadFromCPU);
 
             if (isExpiredData(dataReadFromCPU)) {
                 continue;
@@ -67,14 +66,16 @@ public class CommonFog extends CommonServer {
 
             if (hasToProcess(dataReadFromCPU)) {
                 processData(dataReadFromCPU);
+                continue;
             }
 
+            EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph, dataReadFromCPU);
             this.transmitData(nextEquipment, dataReadFromCPU);
         }
     }
 
     public boolean hasToProcess(DataInterface data) {
-        return data.getPriority() <= 3;
+        return ((data.getDestination() == this) || (data.getPriority() <= 3));
     }
 
     protected EquipmentInterface findTheNearestFog(Graph<EquipmentInterface, DefaultEdge> equipementGraph) {
@@ -98,6 +99,6 @@ public class CommonFog extends CommonServer {
             }
             return nextFog;
         }
-        return null;
+        return EquipmentFactory.getCreateCluster();
     }
 }
