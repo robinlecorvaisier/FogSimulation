@@ -31,7 +31,7 @@ public class CommonFog extends CommonServer {
     public void transmitToFog(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
         while (hasData()) {
             DataInterface dataRead = storage.read();
-            if (!hasToProcess(dataRead)) {
+            if (dataRead.getPriority() <= 3) {
                 storage.write(dataRead);
                 return;
             }
@@ -75,7 +75,7 @@ public class CommonFog extends CommonServer {
     }
 
     public boolean hasToProcess(DataInterface data) {
-        return ((data.getDestination() == this) || (data.getPriority() <= 3));
+        return ((data.getDestination() == this) || (data.getPriority() <= 1));
     }
 
     protected EquipmentInterface findTheNearestFog(Graph<EquipmentInterface, DefaultEdge> equipementGraph) {
