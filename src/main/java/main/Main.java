@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        for (int y = 0; y < 10000; y++) {
+        for (int y = 0; y < 100; y++) {
             NetworkInterface network = NetworkFactory.demoWithRandomNetwork();
             for (int i = 0; i < 100; i++) {
                 network.iterate();
@@ -19,7 +19,7 @@ public class Main {
             DataFactory.clear();
         }
 
-        for (int y = 0; y < 10000; y++) {
+        for (int y = 0; y < 100; y++) {
             NetworkInterface network = NetworkFactory.demoWithFogsNetwork();
             for (int i = 0; i < 100; i++) {
                 network.iterate();
@@ -29,7 +29,7 @@ public class Main {
             DataFactory.clear();
         }
 
-        for (int y = 0; y < 10000; y++) {
+        for (int y = 0; y < 100; y++) {
             NetworkInterface network = NetworkFactory.demoNoFogsNetwork();
             for (int i = 0; i < 100; i++) {
                 network.iterate();
