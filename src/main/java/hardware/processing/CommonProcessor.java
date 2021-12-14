@@ -58,7 +58,9 @@ public class CommonProcessor implements ProcessorInterface {
     @Override
     public DataInterface transmitToFog() {
         Iterator<DataInterface> it = dataToFog.iterator();
-        return memory.read(it.next());
+        DataInterface data = it.next();
+        dataToFog.remove(data);
+        return memory.read(data);
     }
 
     @Override

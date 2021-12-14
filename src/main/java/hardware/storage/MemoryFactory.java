@@ -16,6 +16,6 @@ public class MemoryFactory {
     }
 
     public static StorageInterface ram128() {
-        return new Memory(128, new HashSet<>());
+        return new Memory(80, new HashSet<>());
     }
 }
