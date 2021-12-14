@@ -2,7 +2,6 @@ package hardware.storage;
 
 import data.DataInterface;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
@@ -21,9 +20,14 @@ public class Memory implements StorageInterface {
     public DataInterface read() {
         Iterator<DataInterface> it = dataInterfaces.iterator();
         DataInterface dataRead = it.next();
-        dataInterfaces.remove(dataRead);
-        currentStorage -= dataRead.getSize();
-        return dataRead;
+        return this.read(dataRead);
+    }
+
+    @Override
+    public DataInterface read(DataInterface data) {
+        dataInterfaces.remove(data);
+        currentStorage -= data.getSize();
+        return data;
     }
 
     @Override

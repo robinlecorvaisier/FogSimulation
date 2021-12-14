@@ -160,9 +160,9 @@ public class NetworkFactory {
         Map<String, EquipmentInterface> vertex = new HashMap<>();
 
         EquipmentInterface server1 = EquipmentFactory.getCommonFog();
-        EquipmentInterface server2 = EquipmentFactory.getCommonServer();
+        EquipmentInterface server2 = EquipmentFactory.getCommonFog();
         EquipmentInterface server3 = EquipmentFactory.getCommonServer();
-        EquipmentInterface server4 = EquipmentFactory.getCommonServer();
+        EquipmentInterface server4 = EquipmentFactory.getCommonFog();
         EquipmentInterface server5 = EquipmentFactory.getCommonServer();
 
         server1.setName("server Fog 1");
@@ -221,6 +221,12 @@ public class NetworkFactory {
         graph.addEdge(device8, server3);
         graph.addEdge(device9, server1);
         graph.addEdge(device10, server4);
+
+        //fog connexion
+        graph.addEdge(server1, server4);
+        graph.addEdge(server4, server1);
+        graph.addEdge(server1, server2);
+        graph.addEdge(server2, server1);
 
         NetworkInterface network = new CommonNetwork(graph);
         network.setNetworkName("huge test network with fog");

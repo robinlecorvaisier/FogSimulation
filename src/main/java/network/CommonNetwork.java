@@ -49,10 +49,7 @@ public class CommonNetwork implements NetworkInterface {
                         .replace('@', '_')
         );
         exporter.setVertexAttributeProvider(v -> {
-            Map<String, Attribute> map = new LinkedHashMap<>();
-            map.put("label", DefaultAttribute.createAttribute(v.toString()));
-            map.put("shape", DefaultAttribute.createAttribute("record"));
-            return map;
+            return v.getDotStylise().getStyle();
         });
         exporter.setGraphAttributeProvider(() -> {
             Map<String, Attribute> map = new LinkedHashMap<>();

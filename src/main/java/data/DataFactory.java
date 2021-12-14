@@ -23,7 +23,7 @@ public class DataFactory {
 
     private static int getRandomExpirationDateValue() {
         int minimumSize = 1;
-        int maximumSize = 10;
+        int maximumSize = 5;
         return minimumSize + random.nextInt(maximumSize - minimumSize);
     }
 

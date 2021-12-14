@@ -6,6 +6,8 @@ public interface StorageInterface {
 
     DataInterface read();
 
+    DataInterface read(DataInterface data);
+
     boolean write(DataInterface data);
 
     double getPercentageStorage();

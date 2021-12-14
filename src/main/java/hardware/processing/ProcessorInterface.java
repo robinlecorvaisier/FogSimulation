@@ -1,6 +1,7 @@
 package hardware.processing;
 
 import data.DataInterface;
+import equipment.EquipmentInterface;
 
 public interface ProcessorInterface {
 
@@ -15,4 +16,10 @@ public interface ProcessorInterface {
     double getNewPercentageStorage(DataInterface data);
 
     boolean hasData();
+
+    boolean chargeToFogTransmit(DataInterface data);
+
+    DataInterface transmitToFog();
+
+    boolean hasDataToFog();
 }

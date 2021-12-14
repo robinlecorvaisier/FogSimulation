@@ -1,6 +1,7 @@
 package equipment;
 
 import data.DataInterface;
+import dot.DotStylizeInterface;
 import listener.equipment.EquipmentListenerInterface;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
@@ -11,8 +12,8 @@ public class CommonCluster extends EquipmentCommon implements EquipmentInterface
 
     private final ArrayList<EquipmentInterface> equipments;
 
-    public CommonCluster(ArrayList<EquipmentInterface> equipments, EquipmentListenerInterface equipmentListener) {
-        super(equipmentListener);
+    public CommonCluster(ArrayList<EquipmentInterface> equipments, EquipmentListenerInterface equipmentListener, DotStylizeInterface dotStyle) {
+        super(equipmentListener, dotStyle);
         this.equipments = equipments;
     }
 

@@ -1,6 +1,7 @@
 package equipment;
 
 import data.DataInterface;
+import dot.DotStylizeInterface;
 import listener.equipment.EquipmentListenerInterface;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
@@ -13,14 +14,23 @@ public abstract class EquipmentCommon implements EquipmentInterface {
 
     protected EquipmentListenerInterface equipmentListener;
 
-    public EquipmentCommon(EquipmentListenerInterface equipmentListener) {
+    private final DotStylizeInterface dotStyle;
+
+    public EquipmentCommon(EquipmentListenerInterface equipmentListener, DotStylizeInterface dotStyle) {
         this.equipmentName = super.toString();
         this.equipmentListener = equipmentListener;
+        this.dotStyle = dotStyle;
     }
 
     @Override
     public String toString() {
         return equipmentName + equipmentListener;
+    }
+
+    @Override
+    public DotStylizeInterface getDotStylise() {
+        dotStyle.setLabel(this.toString());
+        return dotStyle;
     }
 
     @Override

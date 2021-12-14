@@ -1,117 +1,124 @@
-<svg width="775pt" height="563pt"
- viewBox="0.00 0.00 775.08 563.20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 559.2)">
+<svg width="775pt" height="630pt"
+ viewBox="0.00 0.00 775.08 630.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 626.4)">
 <title>G</title>
-<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-559.2 771.0758,-559.2 771.0758,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-626.4 771.0758,-626.4 771.0758,4 -4,4"/>
 <text text-anchor="middle" x="383.5379" y="-58.6" font-family="Times,serif" font-size="14.00" fill="#000000">test network</text>
 <text text-anchor="middle" x="383.5379" y="-41.8" font-family="Times,serif" font-size="14.00" fill="#000000">Data lost : 0(0.0)</text>
 <text text-anchor="middle" x="383.5379" y="-25" font-family="Times,serif" font-size="14.00" fill="#000000">Data Expired : 0(0.0)</text>
-<text text-anchor="middle" x="383.5379" y="-8.2" font-family="Times,serif" font-size="14.00" fill="#000000">Data Processed :0(0.0)</text>
+<text text-anchor="middle" x="383.5379" y="-8.2" font-family="Times,serif" font-size="14.00" fill="#000000">Data Processed :90(2557.8736691642193)</text>
 <!-- Device_1 -->
 <g id="node1" class="node">
 <title>Device_1</title>
-<polygon fill="none" stroke="#000000" points="0,-462.7 0,-554.7 243.0758,-554.7 243.0758,-462.7 0,-462.7"/>
-<text text-anchor="middle" x="121.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Device 1</text>
-<text text-anchor="middle" x="121.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
-<text text-anchor="middle" x="121.5379" y="-504.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(976.3547304276353)</text>
-<text text-anchor="middle" x="121.5379" y="-487.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="121.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#a020f0" points="0,-513.1 0,-621.9 243.0758,-621.9 243.0758,-513.1 0,-513.1"/>
+<text text-anchor="middle" x="121.5379" y="-605.3" font-family="Times,serif" font-size="14.00" fill="#000000">Device 1</text>
+<text text-anchor="middle" x="121.5379" y="-588.5" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="121.5379" y="-571.7" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(889.3369348573866)</text>
+<text text-anchor="middle" x="121.5379" y="-554.9" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="121.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="121.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- S2 -->
 <g id="node4" class="node">
 <title>S2</title>
-<polygon fill="none" stroke="#000000" points="255.5,-333.7 255.5,-425.7 505.5758,-425.7 505.5758,-333.7 255.5,-333.7"/>
-<text text-anchor="middle" x="380.5379" y="-409.1" font-family="Times,serif" font-size="14.00" fill="#000000">S2</text>
-<text text-anchor="middle" x="380.5379" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 60(1884.2293617839885)</text>
-<text text-anchor="middle" x="380.5379" y="-375.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 60(1884.2293617839885)</text>
-<text text-anchor="middle" x="380.5379" y="-358.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="380.5379" y="-341.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#00ff00" points="255.5,-367.3 255.5,-476.1 505.5758,-476.1 505.5758,-367.3 255.5,-367.3"/>
+<text text-anchor="middle" x="380.5379" y="-459.5" font-family="Times,serif" font-size="14.00" fill="#000000">S2</text>
+<text text-anchor="middle" x="380.5379" y="-442.7" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 60(1786.1598831003546)</text>
+<text text-anchor="middle" x="380.5379" y="-425.9" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 60(1786.1598831003541)</text>
+<text text-anchor="middle" x="380.5379" y="-409.1" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="380.5379" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="380.5379" y="-375.5" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- Device_1&#45;&gt;S2 -->
 <g id="edge4" class="edge">
 <title>Device_1&#45;&gt;S2</title>
-<path fill="none" stroke="#000000" d="M213.9459,-462.6744C235.0472,-452.1645 257.5834,-440.9399 279.0422,-430.2519"/>
-<polygon fill="#000000" stroke="#000000" points="280.7748,-433.2991 288.1655,-425.7079 277.6539,-427.0333 280.7748,-433.2991"/>
+<path fill="none" stroke="#000000" d="M218.3483,-513.0021C236.8299,-502.5982 256.2621,-491.6591 275.0006,-481.1106"/>
+<polygon fill="#000000" stroke="#000000" points="276.8476,-484.0873 283.8448,-476.1319 273.4137,-477.9874 276.8476,-484.0873"/>
 </g>
 <!-- Device_2 -->
 <g id="node2" class="node">
 <title>Device_2</title>
-<polygon fill="none" stroke="#000000" points="261,-462.7 261,-554.7 504.0758,-554.7 504.0758,-462.7 261,-462.7"/>
-<text text-anchor="middle" x="382.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Device 2</text>
-<text text-anchor="middle" x="382.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
-<text text-anchor="middle" x="382.5379" y="-504.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(907.8746313563524)</text>
-<text text-anchor="middle" x="382.5379" y="-487.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="382.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#a020f0" points="261,-513.1 261,-621.9 504.0758,-621.9 504.0758,-513.1 261,-513.1"/>
+<text text-anchor="middle" x="382.5379" y="-605.3" font-family="Times,serif" font-size="14.00" fill="#000000">Device 2</text>
+<text text-anchor="middle" x="382.5379" y="-588.5" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="382.5379" y="-571.7" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(896.8229482429675)</text>
+<text text-anchor="middle" x="382.5379" y="-554.9" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="382.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="382.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- Device_2&#45;&gt;S2 -->
 <g id="edge5" class="edge">
 <title>Device_2&#45;&gt;S2</title>
-<path fill="none" stroke="#000000" d="M381.8215,-462.4924C381.6894,-453.9706 381.5501,-444.9844 381.4139,-436.1993"/>
-<polygon fill="#000000" stroke="#000000" points="384.9107,-435.9631 381.256,-426.0186 377.9116,-436.0716 384.9107,-435.9631"/>
+<path fill="none" stroke="#000000" d="M381.7875,-512.7946C381.6696,-504.1992 381.5467,-495.2432 381.4261,-486.4475"/>
+<polygon fill="#000000" stroke="#000000" points="384.9228,-486.1781 381.2859,-476.227 377.9235,-486.2741 384.9228,-486.1781"/>
 </g>
 <!-- Device_3 -->
 <g id="node3" class="node">
 <title>Device_3</title>
-<polygon fill="none" stroke="#000000" points="524,-462.7 524,-554.7 767.0758,-554.7 767.0758,-462.7 524,-462.7"/>
-<text text-anchor="middle" x="645.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Device 3</text>
-<text text-anchor="middle" x="645.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
-<text text-anchor="middle" x="645.5379" y="-504.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(910.8139258428848)</text>
-<text text-anchor="middle" x="645.5379" y="-487.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="645.5379" y="-470.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#a020f0" points="524,-513.1 524,-621.9 767.0758,-621.9 767.0758,-513.1 524,-513.1"/>
+<text text-anchor="middle" x="645.5379" y="-605.3" font-family="Times,serif" font-size="14.00" fill="#000000">Device 3</text>
+<text text-anchor="middle" x="645.5379" y="-588.5" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 0(0.0)</text>
+<text text-anchor="middle" x="645.5379" y="-571.7" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(771.7137860638655)</text>
+<text text-anchor="middle" x="645.5379" y="-554.9" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="645.5379" y="-538.1" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="645.5379" y="-521.3" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- S3 -->
 <g id="node5" class="node">
 <title>S3</title>
-<polygon fill="none" stroke="#000000" points="524,-333.7 524,-425.7 767.0758,-425.7 767.0758,-333.7 524,-333.7"/>
-<text text-anchor="middle" x="645.5379" y="-409.1" font-family="Times,serif" font-size="14.00" fill="#000000">S3</text>
-<text text-anchor="middle" x="645.5379" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 30(910.8139258428848)</text>
-<text text-anchor="middle" x="645.5379" y="-375.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(910.8139258428848)</text>
-<text text-anchor="middle" x="645.5379" y="-358.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="645.5379" y="-341.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#00ff00" points="524,-367.3 524,-476.1 767.0758,-476.1 767.0758,-367.3 524,-367.3"/>
+<text text-anchor="middle" x="645.5379" y="-459.5" font-family="Times,serif" font-size="14.00" fill="#000000">S3</text>
+<text text-anchor="middle" x="645.5379" y="-442.7" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 30(771.7137860638655)</text>
+<text text-anchor="middle" x="645.5379" y="-425.9" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 30(771.7137860638655)</text>
+<text text-anchor="middle" x="645.5379" y="-409.1" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="645.5379" y="-392.3" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="645.5379" y="-375.5" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- Device_3&#45;&gt;S3 -->
 <g id="edge6" class="edge">
 <title>Device_3&#45;&gt;S3</title>
-<path fill="none" stroke="#000000" d="M645.5379,-462.4924C645.5379,-453.9706 645.5379,-444.9844 645.5379,-436.1993"/>
-<polygon fill="#000000" stroke="#000000" points="649.038,-436.0185 645.5379,-426.0186 642.038,-436.0186 649.038,-436.0185"/>
+<path fill="none" stroke="#000000" d="M645.5379,-512.7946C645.5379,-504.1992 645.5379,-495.2432 645.5379,-486.4475"/>
+<polygon fill="#000000" stroke="#000000" points="649.038,-486.227 645.5379,-476.227 642.038,-486.2271 649.038,-486.227"/>
 </g>
 <!-- S1 -->
 <g id="node6" class="node">
 <title>S1</title>
-<polygon fill="none" stroke="#000000" points="391,-204.7 391,-296.7 634.0758,-296.7 634.0758,-204.7 391,-204.7"/>
-<text text-anchor="middle" x="512.5379" y="-280.1" font-family="Times,serif" font-size="14.00" fill="#000000">S1</text>
-<text text-anchor="middle" x="512.5379" y="-263.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 90(2795.043287626873)</text>
-<text text-anchor="middle" x="512.5379" y="-246.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 90(2795.043287626873)</text>
-<text text-anchor="middle" x="512.5379" y="-229.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
-<text text-anchor="middle" x="512.5379" y="-212.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
+<polygon fill="none" stroke="#00ff00" points="387.5,-221.5 387.5,-330.3 637.5758,-330.3 637.5758,-221.5 387.5,-221.5"/>
+<text text-anchor="middle" x="512.5379" y="-313.7" font-family="Times,serif" font-size="14.00" fill="#000000">S1</text>
+<text text-anchor="middle" x="512.5379" y="-296.9" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 90(2557.873669164219)</text>
+<text text-anchor="middle" x="512.5379" y="-280.1" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 90(2557.8736691642193)</text>
+<text text-anchor="middle" x="512.5379" y="-263.3" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<text text-anchor="middle" x="512.5379" y="-246.5" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
+<text text-anchor="middle" x="512.5379" y="-229.7" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- S2&#45;&gt;S1 -->
 <g id="edge2" class="edge">
 <title>S2&#45;&gt;S1</title>
-<path fill="none" stroke="#000000" d="M427.8201,-333.4924C437.5827,-323.9517 447.9409,-313.8289 457.9392,-304.0578"/>
-<polygon fill="#000000" stroke="#000000" points="460.4365,-306.5111 465.1422,-297.0186 455.544,-301.5047 460.4365,-306.5111"/>
+<path fill="none" stroke="#000000" d="M430.0654,-366.9946C438.6086,-357.5583 447.5451,-347.6875 456.2511,-338.0713"/>
+<polygon fill="#000000" stroke="#000000" points="459.0549,-340.1893 463.1719,-330.427 453.8657,-335.4912 459.0549,-340.1893"/>
 </g>
 <!-- S3&#45;&gt;S1 -->
 <g id="edge3" class="edge">
 <title>S3&#45;&gt;S1</title>
-<path fill="none" stroke="#000000" d="M597.8975,-333.4924C588.061,-323.9517 577.6242,-313.8289 567.5502,-304.0578"/>
-<polygon fill="#000000" stroke="#000000" points="569.9077,-301.4685 560.2927,-297.0186 565.0341,-306.4933 569.9077,-301.4685"/>
+<path fill="none" stroke="#000000" d="M595.6352,-366.9946C587.0273,-357.5583 578.0231,-347.6875 569.2511,-338.0713"/>
+<polygon fill="#000000" stroke="#000000" points="571.6031,-335.4562 562.2779,-330.427 566.4315,-340.1738 571.6031,-335.4562"/>
 </g>
 <!-- Cluster_1 -->
 <g id="node7" class="node">
 <title>Cluster_1</title>
-<polygon fill="none" stroke="#000000" points="394.8913,-75.7 394.8913,-167.7 630.1845,-167.7 630.1845,-75.7 394.8913,-75.7"/>
-<text text-anchor="middle" x="512.5379" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">Cluster 1</text>
-<text text-anchor="middle" x="512.5379" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 90(2795.043287626873)</text>
-<text text-anchor="middle" x="512.5379" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 0(0.0)</text>
-<text text-anchor="middle" x="512.5379" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :0(0.0)</text>
+<polygon fill="none" stroke="#0000ff" points="386.534,-75.7 386.534,-184.5 638.5418,-184.5 638.5418,-75.7 386.534,-75.7"/>
+<text text-anchor="middle" x="512.5379" y="-167.9" font-family="Times,serif" font-size="14.00" fill="#000000">Cluster 1</text>
+<text text-anchor="middle" x="512.5379" y="-151.1" font-family="Times,serif" font-size="14.00" fill="#000000">Receipt data : 90(2557.8736691642193)</text>
+<text text-anchor="middle" x="512.5379" y="-134.3" font-family="Times,serif" font-size="14.00" fill="#000000">Transmit data : 0(0.0)</text>
+<text text-anchor="middle" x="512.5379" y="-117.5" font-family="Times,serif" font-size="14.00" fill="#000000">Processed data :90(2557.8736691642193)</text>
+<text text-anchor="middle" x="512.5379" y="-100.7" font-family="Times,serif" font-size="14.00" fill="#000000">Lost data :0(0.0)</text>
 <text text-anchor="middle" x="512.5379" y="-83.9" font-family="Times,serif" font-size="14.00" fill="#000000">Expired data :0</text>
 </g>
 <!-- S1&#45;&gt;Cluster_1 -->
 <g id="edge1" class="edge">
 <title>S1&#45;&gt;Cluster_1</title>
-<path fill="none" stroke="#000000" d="M512.5379,-204.4924C512.5379,-195.9706 512.5379,-186.9844 512.5379,-178.1993"/>
-<polygon fill="#000000" stroke="#000000" points="516.038,-178.0185 512.5379,-168.0186 509.038,-178.0186 516.038,-178.0185"/>
+<path fill="none" stroke="#000000" d="M512.5379,-221.1946C512.5379,-212.5992 512.5379,-203.6432 512.5379,-194.8475"/>
+<polygon fill="#000000" stroke="#000000" points="516.038,-194.627 512.5379,-184.627 509.038,-194.6271 516.038,-194.627"/>
 </g>
 </g>
 </svg>

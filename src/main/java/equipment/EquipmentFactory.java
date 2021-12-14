@@ -2,9 +2,11 @@ package equipment;
 
 import data_generator.CommonDataGenerator;
 import data_generator.TestDataGenerator;
+import dot.DotStyliseFactory;
 import hardware.processing.ProcessorFactory;
 import hardware.storage.MemoryFactory;
 import listener.equipment.CommonEquipmentListener;
+import listener.equipment.FogListener;
 
 import java.util.*;
 
@@ -18,7 +20,8 @@ public class EquipmentFactory {
                 0.7,
                 ProcessorFactory.getPM128(),
                 0.7,
-                new CommonEquipmentListener()
+                new CommonEquipmentListener(),
+                DotStyliseFactory.getServerDotNode()
         );
     }
 
@@ -28,7 +31,8 @@ public class EquipmentFactory {
                 0.7,
                 ProcessorFactory.getPM128(),
                 0.7,
-                new CommonEquipmentListener()
+                new FogListener(),
+                DotStyliseFactory.getFogDotNode()
         );
 
         fogNods.add(fog);
@@ -44,14 +48,14 @@ public class EquipmentFactory {
         equipments.add(getCommonServer());
         equipments.add(getCommonServer());
         equipments.add(getCommonServer());
-        return new CommonCluster(equipments, new CommonEquipmentListener());
+        return new CommonCluster(equipments, new CommonEquipmentListener(), DotStyliseFactory.getClusterDotNode());
     }
 
     public static EquipmentInterface getCommonDevice() {
-        return new CommonDevice(new CommonDataGenerator(), new CommonEquipmentListener());
+        return new CommonDevice(new CommonDataGenerator(), new CommonEquipmentListener(), DotStyliseFactory.getDeviceDotNode());
     }
 
     public static EquipmentInterface getTestDevice() {
-        return new CommonDevice(new TestDataGenerator(), new CommonEquipmentListener());
+        return new CommonDevice(new TestDataGenerator(), new CommonEquipmentListener(), DotStyliseFactory.getDeviceDotNode());
     }
 }

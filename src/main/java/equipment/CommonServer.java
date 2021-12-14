@@ -1,6 +1,7 @@
 package equipment;
 
 import data.DataInterface;
+import dot.DotStylizeInterface;
 import hardware.processing.ProcessorInterface;
 import hardware.storage.StorageInterface;
 import listener.equipment.EquipmentListenerInterface;
@@ -15,8 +16,8 @@ public class CommonServer extends EquipmentCommon {
     protected ProcessorInterface processor;
     protected double percentageProcessorThreshold;
 
-    public CommonServer(StorageInterface storage, double percentageStorageThreshold, ProcessorInterface processor, double percentageProcessorThreshold, EquipmentListenerInterface equipmentListener) {
-        super(equipmentListener);
+    public CommonServer(StorageInterface storage, double percentageStorageThreshold, ProcessorInterface processor, double percentageProcessorThreshold, EquipmentListenerInterface equipmentListener, DotStylizeInterface dotStyle) {
+        super(equipmentListener, dotStyle);
         this.storage = storage;
         this.percentageStorageThreshold = percentageStorageThreshold;
         this.processor = processor;
@@ -63,9 +64,9 @@ public class CommonServer extends EquipmentCommon {
 
     @Override
     public boolean receiptData(DataInterface data) {
-        if (!willExceedThresholdStorage(data)) {
+        if (storage.write(data)) {
             super.receiptData(data);
-            return storage.write(data);
+            return true;
         }
         equipmentListener.onDataLost(data);
         data.lost();

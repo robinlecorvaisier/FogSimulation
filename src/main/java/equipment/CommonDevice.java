@@ -2,6 +2,7 @@ package equipment;
 
 import data.DataInterface;
 import data_generator.DataGeneratorInterface;
+import dot.DotStylizeInterface;
 import listener.equipment.EquipmentListenerInterface;
 import org.jgrapht.Graph;
 import org.jgrapht.graph.DefaultEdge;
@@ -12,8 +13,8 @@ public class CommonDevice extends EquipmentCommon implements EquipmentInterface 
 
     protected DataGeneratorInterface dataGenerator;
 
-    public CommonDevice(DataGeneratorInterface dataGenerator, EquipmentListenerInterface equipmentListener) {
-        super(equipmentListener);
+    public CommonDevice(DataGeneratorInterface dataGenerator, EquipmentListenerInterface equipmentListener, DotStylizeInterface dotStyle) {
+        super(equipmentListener, dotStyle);
         this.dataGenerator = dataGenerator;
     }
 
