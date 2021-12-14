@@ -74,6 +74,11 @@ public class CommonDataListener implements DataListenerInterface {
     }
 
     @Override
+    public double getAverageDataProcessedByIteration() {
+        return 0;
+    }
+
+    @Override
     public String toString() {
         return "\\nData lost : " + dataLostCount + "(" + dataLostSize + ")" +
                 "\\nData Expired : " + dataExpiredCount + "(" + dataExpiredSize + ")" +

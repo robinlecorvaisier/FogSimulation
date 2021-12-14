@@ -8,8 +8,8 @@ import java.util.Random;
 
 public class DataFactory {
 
-    private static final Random random = new Random();
-    private static final DataListenerInterface dataListener = new CommonDataListener();
+    private static Random random = new Random();
+    private static DataListenerInterface dataListener = new CommonDataListener();
 
 
     public static DataInterface getData() {
@@ -38,5 +38,10 @@ public class DataFactory {
 
     public static DataListenerInterface getDataListener() {
         return dataListener;
+    }
+
+    public static void clear(){
+        Random random = new Random();
+        DataListenerInterface dataListener = new CommonDataListener();
     }
 }

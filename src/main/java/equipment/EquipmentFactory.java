@@ -12,8 +12,8 @@ import java.util.*;
 
 public class EquipmentFactory {
 
-    private static final Set<EquipmentInterface> fogNods = new HashSet<>();
-    private static final Set<EquipmentInterface> clusters = new HashSet<>();
+    private static Set<EquipmentInterface> fogNods = new HashSet<>();
+    private static Set<EquipmentInterface> clusters = new HashSet<>();
 
     public static EquipmentInterface getCommonServer() {
         return new CommonServer(
@@ -81,5 +81,10 @@ public class EquipmentFactory {
 
     public static EquipmentInterface getTestDevice() {
         return new CommonDevice(new TestDataGenerator(), new CommonEquipmentListener(), DotStyliseFactory.getDeviceDotNode());
+    }
+
+    public static void clear(){
+        Set<EquipmentInterface> fogNods = new HashSet<>();
+        Set<EquipmentInterface> clusters = new HashSet<>();
     }
 }

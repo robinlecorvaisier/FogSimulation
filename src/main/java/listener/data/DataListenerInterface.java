@@ -26,4 +26,6 @@ public interface DataListenerInterface {
 
     public double getDataExpiredSize();
 
+    public double getAverageDataProcessedByIteration();
+
 }
