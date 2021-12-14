@@ -78,7 +78,7 @@ public class CommonDataListener implements DataListenerInterface {
 
     @Override
     public double getAverageDataProcessedByIteration() {
-        return 0;
+        return (iterationHasBeenProcess/(double)dataProcessedCount);
     }
 
     @Override

@@ -41,7 +41,7 @@ public class DataFactory {
     }
 
     public static void clear(){
-        Random random = new Random();
-        DataListenerInterface dataListener = new CommonDataListener();
+        random = new Random();
+        dataListener = new CommonDataListener();
     }
 }

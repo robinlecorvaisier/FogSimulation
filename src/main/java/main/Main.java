@@ -5,8 +5,6 @@ import equipment.EquipmentFactory;
 import network.NetworkFactory;
 import network.NetworkInterface;
 
-import javax.xml.crypto.Data;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -16,7 +14,7 @@ public class Main {
             for (int i = 0; i < 100; i++) {
                 network.iterate();
             }
-            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), 0, "random");
+            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), DataFactory.getDataListener().getDataProcessedCount(), "random");
             EquipmentFactory.clear();
             DataFactory.clear();
         }
@@ -26,7 +24,7 @@ public class Main {
             for (int i = 0; i < 100; i++) {
                 network.iterate();
             }
-            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), 0, "fogGraph");
+            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), DataFactory.getDataListener().getDataProcessedCount(),"fogGraph");
             EquipmentFactory.clear();
             DataFactory.clear();
         }
@@ -36,7 +34,7 @@ public class Main {
             for (int i = 0; i < 100; i++) {
                 network.iterate();
             }
-            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), 0, "NoFogs");
+            Output.edit(DataFactory.getDataListener().getDataExpiredCount(), DataFactory.getDataListener().getDataProcessedCount(),"noFogs");
             EquipmentFactory.clear();
             DataFactory.clear();
         }

@@ -84,7 +84,7 @@ public class EquipmentFactory {
     }
 
     public static void clear(){
-        Set<EquipmentInterface> fogNods = new HashSet<>();
-        Set<EquipmentInterface> clusters = new HashSet<>();
+        fogNods = new HashSet<>();
+        clusters = new HashSet<>();
     }
 }
