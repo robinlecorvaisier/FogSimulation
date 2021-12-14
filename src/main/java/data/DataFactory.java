@@ -1,5 +1,6 @@
 package data;
 
+import equipment.EquipmentFactory;
 import listener.data.CommonDataListener;
 import listener.data.DataListenerInterface;
 
@@ -12,7 +13,7 @@ public class DataFactory {
 
 
     public static DataInterface getData() {
-        return new CommonData(getRandomSizeValue(), getRandomExpirationDateValue(), dataListener);
+        return new CommonData(getRandomSizeValue(), getRandomExpirationDateValue(), dataListener, EquipmentFactory.getCreateCluster());
     }
 
     private static double getRandomSizeValue() {
@@ -28,7 +29,7 @@ public class DataFactory {
     }
 
     public static DataInterface getDataTest(double size) {
-        return new CommonData(size, 10, dataListener);
+        return new CommonData(size, 10, dataListener, EquipmentFactory.getCreateCluster());
     }
 
     public static String dataListenerStatus() {

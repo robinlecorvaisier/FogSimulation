@@ -13,6 +13,7 @@ import java.util.*;
 public class EquipmentFactory {
 
     private static final Set<EquipmentInterface> fogNods = new HashSet<>();
+    private static final Set<EquipmentInterface> clusters = new HashSet<>();
 
     public static EquipmentInterface getCommonServer() {
         return new CommonServer(
@@ -48,7 +49,16 @@ public class EquipmentFactory {
         equipments.add(getCommonServer());
         equipments.add(getCommonServer());
         equipments.add(getCommonServer());
-        return new CommonCluster(equipments, new CommonEquipmentListener(), DotStyliseFactory.getClusterDotNode());
+        EquipmentInterface cluster = new CommonCluster(equipments, new CommonEquipmentListener(), DotStyliseFactory.getClusterDotNode());
+        clusters.add(cluster);
+        return cluster;
+    }
+
+    public static EquipmentInterface getCreateCluster() {
+        if (clusters.iterator().hasNext()) {
+            return clusters.iterator().next();
+        }
+        return null;
     }
 
     public static EquipmentInterface getCommonDevice() {

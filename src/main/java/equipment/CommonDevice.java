@@ -25,9 +25,10 @@ public class CommonDevice extends EquipmentCommon implements EquipmentInterface 
 
     @Override
     public void action(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
-        EquipmentInterface nextEquipment = getNextEquipment(equipmentGraph);
+        DataInterface data = dataGenerator.generate();
+        EquipmentInterface nextEquipment = getNextEquipment(equipmentGraph, data);
         if (!Objects.isNull(nextEquipment)) {
-            this.transmitData(nextEquipment, dataGenerator.generate());
+            this.transmitData(nextEquipment, data);
         }
     }
 

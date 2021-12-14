@@ -1,5 +1,7 @@
 package data;
 
+import equipment.EquipmentInterface;
+
 public interface DataInterface extends Comparable<DataInterface> {
 
     double getSize();
@@ -14,4 +16,7 @@ public interface DataInterface extends Comparable<DataInterface> {
 
     void lost();
 
+    EquipmentInterface getDestination();
+
+    void setDestination(EquipmentInterface destination);
 }

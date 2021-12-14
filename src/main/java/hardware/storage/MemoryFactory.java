@@ -8,11 +8,11 @@ import java.util.TreeSet;
 public class MemoryFactory {
 
     public static StorageInterface hdd500() {
-        return new Hdd(500, new HashSet<>());
+        return new Hdd(5000, new HashSet<>());
     }
 
     public static StorageInterface hdd500ForFogNog() {
-        return new Hdd(500, new TreeSet<>());
+        return new Hdd(5000, new TreeSet<>());
     }
 
     public static StorageInterface ram128() {

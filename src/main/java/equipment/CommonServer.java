@@ -41,10 +41,10 @@ public class CommonServer extends EquipmentCommon {
     }
 
     protected void processCPU(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
-        EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph);
 
         while (processor.hasData()) {
             DataInterface dataReadFromCPU = processor.transmit();
+            EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph, dataReadFromCPU);
 
             if (isExpiredData(dataReadFromCPU)) {
                 continue;

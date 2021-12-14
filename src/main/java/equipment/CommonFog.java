@@ -22,21 +22,23 @@ public class CommonFog extends CommonServer {
     }
 
     @Override
-    protected void putInCPUCache() {
-        while (this.hasData() && processor.getPercentageStorage() < percentageProcessorThreshold) {
-            DataInterface dataRead = storage.read();
-            if (!processor.charge(dataRead)) {
-                storage.write(dataRead);
-                break;
-            }
-        }
+    public void action(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
+        putInCPUCache();
+        transmitToFog(equipmentGraph);
+        processCPU(equipmentGraph);
+    }
 
+    public void transmitToFog(Graph<EquipmentInterface, DefaultEdge> equipmentGraph) {
         while (hasData()) {
             DataInterface dataRead = storage.read();
             if (!hasToProcess(dataRead)) {
                 storage.write(dataRead);
                 return;
             }
+
+            EquipmentInterface nearsetFog = findTheNearestFog(equipmentGraph);
+            dataRead.setDestination(nearsetFog);
+
             if (!processor.chargeToFogTransmit(dataRead)) {
                 storage.write(dataRead);
                 return;
@@ -49,15 +51,15 @@ public class CommonFog extends CommonServer {
 
         while (processor.hasDataToFog()) {
             DataInterface dataToFog = processor.transmitToFog();
-            EquipmentInterface nearestFog = findTheNearestFog(equipmentGraph);
-            this.transmitData(nearestFog, dataToFog);
+            EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph, dataToFog);
+            this.transmitData(nextEquipment, dataToFog);
             FogListener fogListener = (FogListener) equipmentListener;
             fogListener.onDataFogTransmit(dataToFog);
         }
 
-        EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph);
         while (processor.hasData()) {
             DataInterface dataReadFromCPU = processor.transmit();
+            EquipmentInterface nextEquipment = this.getNextEquipment(equipmentGraph, dataReadFromCPU);
 
             if (isExpiredData(dataReadFromCPU)) {
                 continue;
@@ -96,7 +98,6 @@ public class CommonFog extends CommonServer {
             }
             return nextFog;
         }
-
-        return getNextEquipment(equipementGraph);
+        return null;
     }
 }

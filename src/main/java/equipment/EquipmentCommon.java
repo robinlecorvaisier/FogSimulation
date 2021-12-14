@@ -4,9 +4,11 @@ import data.DataInterface;
 import dot.DotStylizeInterface;
 import listener.equipment.EquipmentListenerInterface;
 import org.jgrapht.Graph;
+import org.jgrapht.GraphPath;
+import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultEdge;
 
-import java.util.Set;
+import java.util.List;
 
 public abstract class EquipmentCommon implements EquipmentInterface {
 
@@ -60,12 +62,18 @@ public abstract class EquipmentCommon implements EquipmentInterface {
         this.equipmentName = equipmentName;
     }
 
-    protected EquipmentInterface getNextEquipment(Graph<EquipmentInterface, DefaultEdge> network) {
-        Set<DefaultEdge> outgoingEdges = network.outgoingEdgesOf(this);
-        if (outgoingEdges.iterator().hasNext()) {
-            return network.getEdgeTarget(outgoingEdges.iterator().next());
-        }
-        return null;
+    protected EquipmentInterface getNextEquipment(Graph<EquipmentInterface, DefaultEdge> network, DataInterface data) {
+        EquipmentInterface destination = data.getDestination();
+        return getShortestPathFirstEquipment(network, destination);
+    }
+
+    private EquipmentInterface getShortestPathFirstEquipment(Graph<EquipmentInterface, DefaultEdge> network, EquipmentInterface destination) {
+        DijkstraShortestPath<EquipmentInterface, DefaultEdge> dijShtPth = new DijkstraShortestPath<>(network);
+        GraphPath<EquipmentInterface, DefaultEdge> graphPath = dijShtPth.getPath(this, destination);
+
+        List<EquipmentInterface> equipments = graphPath.getVertexList();
+        equipments.remove(this);
+        return equipments.get(0);
     }
 
     @Override

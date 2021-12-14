@@ -1,5 +1,6 @@
 package data;
 
+import equipment.EquipmentInterface;
 import listener.data.DataListenerInterface;
 
 public class CommonData implements DataInterface, Comparable<DataInterface> {
@@ -7,11 +8,13 @@ public class CommonData implements DataInterface, Comparable<DataInterface> {
     private final double size;
     private DataListenerInterface dataListener;
     private int expirationDate;
+    private EquipmentInterface destination;
 
-    public CommonData(double size, int expirationDate, DataListenerInterface dataListener) {
+    public CommonData(double size, int expirationDate, DataListenerInterface dataListener, EquipmentInterface destination) {
         this.dataListener = dataListener;
         this.size = size;
         this.expirationDate = expirationDate + dataListener.getIteration();
+        this.destination = destination;
     }
 
     @Override
@@ -47,5 +50,15 @@ public class CommonData implements DataInterface, Comparable<DataInterface> {
     @Override
     public int compareTo(DataInterface data) {
         return Integer.compare(this.getPriority(), data.getPriority());
+    }
+
+    @Override
+    public EquipmentInterface getDestination() {
+        return destination;
+    }
+
+    @Override
+    public void setDestination(EquipmentInterface destination) {
+        this.destination = destination;
     }
 }
